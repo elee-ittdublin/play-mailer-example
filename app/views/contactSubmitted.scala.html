@@ -1,0 +1,36 @@
+@(contact: Contact)
+@main("Contact") {
+
+	<h3>Message Sent</h3>
+
+	<fieldset>
+		<legend>Contact Form</legend>
+		<div class="row-form">
+			<label class="label" for="firstName">First name</label>
+			<!-- display firstName value from contact -->
+			@contact.firstName
+		</div>
+		<div class="row-form">
+			<label class="label" for="lastName">Last name</label>
+			<!-- display lastName value from contact -->
+			@contact.lastName
+		</div>
+		<div class="row-form">
+			<label class="label" for="telephone">Telephone</label>
+			<!-- display telephone value from contact, etc.. -->
+			@contact.telephone
+		</div>				
+		<div class="row-form">
+			<label class="label" for="email">Email</label>
+			@contact.email
+		</div>
+		<div class="row-form">
+			<label class="label" for="subject">Subject</label>
+			@contact.subject
+		</div>			
+		<div class="row-form">
+			<label class="label" for="message">Message</label>
+			@contact.message
+		</div>		
+	  </fieldset>
+}

@@ -1,0 +1,36 @@
+@(contactForm: play.data.Form[Contact])
+@import helper._
+
+<!-- Call the main view -->
+@main("Contact") {
+
+	<h3>Contact Core Design</h3>
+	<!-- Dynamically create the form and set the action -->
+	@helper.form(routes.HomeController.contactSubmit) {
+		<fieldset>
+			<legend>Contact Form</legend>
+			<div class="row-form">
+				<!-- Helper generates form field and label -->
+				 @helper.inputText(contactForm("firstName"), '_label -> "First name")
+			</div>
+			<div class="row-form">
+				 @helper.inputText(contactForm("lastName"), '_label -> "Last name")
+			</div>
+			<div class="row-form">
+				 @helper.inputText(contactForm("telephone"), '_label -> "Telephone")
+			</div>				
+			<div class="row-form">
+				 @helper.inputText(contactForm("email"), '_label -> "Email")
+			</div>
+			<div class="row-form">
+				 @helper.inputText(contactForm("subject"), '_label -> "Subject")
+			</div>			
+			<div class="row-form">
+				@helper.textarea(contactForm("message"),'rows -> 3, 'cols -> 30, '_label -> "Message")
+			</div>
+			<div class="row-form form-indent">
+				<input type="submit" value="Send">
+			</div>			
+		  </fieldset>
+	}
+}

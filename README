@@ -1,0 +1,9 @@
+A (very) basic contact form example using Play-Mailer
+
+https://github.com/playframework/play-mailer
+
+Before using:
+
+1. configure the mail server settings in application.conf - at end of file.
+2. Modify the mail message in the contactSubmit() method (see HomeController.java)
+3. Read the Play-Mailer docs for more configuration options (attachments, HTML email, etc.)
